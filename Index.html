@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Institute of Digital Risk — Training and deploying the next generation of digital, cyber, and AI risk practitioners." />
+  <title>Institute of Digital Risk | IDR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor-dot"  aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- SCROLL PROGRESS -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header id="site-header" role="banner">
+  <div class="container">
+    <nav class="nav-inner" role="navigation" aria-label="Primary">
+
+      <a href="#" class="nav-logo" aria-label="IDR — Institute of Digital Risk">
+        <img
+          src="logo with name.png"
+          class="nav-logo-img"
+        />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about"     data-text="About">About</a></li>
+        <li><a href="#model"     data-text="Model">Model</a></li>
+        <li><a href="#community" data-text="Community">Community</a></li>
+        <li><a href="#contact"   data-text="Contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta-wrap">
+        <a href="#contact" class="btn btn-primary">Hire Talent</a>
+        <button class="hamburger" id="ham-btn" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<nav class="nav-mobile" id="mobile-nav" aria-hidden="true" aria-label="Mobile navigation">
+  <a href="#about"     class="m-link">About</a>
+  <a href="#model"     class="m-link">Model</a>
+  <a href="#community" class="m-link">Community</a>
+  <a href="#contact"   class="m-link">Contact</a>
+  <a href="#contact" class="btn btn-primary m-link">Hire Talent</a>
+</nav>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section id="hero" aria-labelledby="hero-h">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <span class="hero-bg-text" aria-hidden="true">IDR</span>
+
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>Industry-Led Training &amp; Deployment</span>
+      </div>
+
+      <h1 class="hero-h1" id="hero-h" aria-label="Advancing the Future of Digital Risk">
+        <span class="line"><span>Advancing</span></span>
+        <span class="line"><span>the Future of</span></span>
+        <span class="line"><span><em>Digital Risk.</em></span></span>
+      </h1>
+
+      <p class="hero-sub">
+        IDR trains and deploys the next generation of digital, cyber, and AI risk
+        practitioners — bridging academic rigour with live industry projects in
+        regulated, high-consequence environments.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#model" class="btn btn-primary">
+          Explore Programs
+          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+        </a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating terminal readout -->
+  <div class="hero-data-readout" aria-hidden="true">
+    <div class="dr-row"><span class="dr-label">STATUS</span><span class="dr-val">ACTIVE</span></div>
+    <div class="dr-row"><span class="dr-label">COHORT</span><span class="dr-val">2025_Q3</span></div>
+    <div class="dr-row"><span class="dr-label">FRAMEWORKS</span><span class="dr-val">NIST / DORA</span></div>
+    <div class="dr-row"><span class="dr-label">SECTORS</span><span class="dr-val">FS / CNI</span></div>
+    <div class="dr-row"><span class="dr-label">PARTNERS</span><span class="dr-val">UK_UNIV+</span></div>
+    <div class="dr-row"><span class="dr-label">MODE</span><span class="dr-val">DEPLOY_READY</span></div>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="scroll-track"><div class="scroll-fill"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-strip" aria-hidden="true" role="presentation">
+  <div class="ticker-inner" id="ticker"><!-- filled by JS --></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad" aria-labelledby="about-h">
+  <span class="section-ghost-num" aria-hidden="true">01</span>
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-left">
+        <div class="accent-bar reveal"></div>
+        <span class="eyebrow reveal">About IDR</span>
+        <h2 id="about-h" class="reveal rd1">
+          Academic Insight.<br>Industry Precision.
+        </h2>
+      </div>
+
+      <div class="about-right">
+        <p class="reveal rd1">
+          The <strong>Institute of Digital Risk</strong> is an industry-led training and deployment
+          institute operating at the intersection of academic insight and live industry
+          application. Through strategic partnerships with leading <strong>UK universities</strong>,
+          IDR develops cohorts of rigorously trained digital, cyber, and AI risk
+          practitioners — deployment-ready from day one.
+        </p>
+        <p class="reveal rd2">
+          We operate exclusively in <strong>regulated, high-consequence environments</strong>:
+          financial services, critical national infrastructure, and the public sector.
+          Our model bridges the gap between theoretical frameworks and real-world risk
+          — ensuring every practitioner we develop is calibrated to the complexity of
+          modern threat landscapes and evolving governance obligations.
+        </p>
+
+        <div class="stats-row reveal rd3">
+          <div class="stat-cell">
+            <span class="stat-num" data-target="3" data-suffix="+">0</span>
+            <span class="stat-lbl">University Partners</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num" data-target="4" data-suffix="">0</span>
+            <span class="stat-lbl">Core Sectors</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num" data-target="100" data-suffix="%">0</span>
+            <span class="stat-lbl">Industry-Aligned</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODEL -->
+<section id="model" class="section-pad" aria-labelledby="model-h">
+  <span class="section-ghost-num" aria-hidden="true">02</span>
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="accent-bar"></div>
+      <span class="eyebrow">The IDR Model</span>
+      <h2 id="model-h">Three Pillars.<br>One Pipeline.</h2>
+      <p>An end-to-end capability — training, innovation, and advisory — designed to operate independently or as an integrated system.</p>
+    </div>
+
+    <div class="pillars-grid" role="list">
+
+      <article class="pillar-card reveal rd1" role="listitem">
+        <div class="pc-num">01</div>
+        <div class="pc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </div>
+        <h3 class="pc-title">Academy</h3>
+        <p class="pc-body">Structured bootcamps, accredited programmes, and professional upskilling pathways. Co-designed with industry — calibrated to live risk environments, not hypothetical scenarios.</p>
+        <div class="pc-tags">
+          <span class="tag">Bootcamps</span>
+          <span class="tag">Accreditation</span>
+          <span class="tag">Cohort Programmes</span>
+        </div>
+        <span class="pc-arrow" aria-hidden="true">&#x2197;</span>
+      </article>
+
+      <article class="pillar-card reveal rd2" role="listitem">
+        <div class="pc-num">02</div>
+        <div class="pc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3 class="pc-title">Innovation &amp; Incubation</h3>
+        <p class="pc-body">Developing proprietary IP, next-generation risk models, and AI governance frameworks. Working at the frontier of agentic AI risk, critical infrastructure resilience, and sovereign data.</p>
+        <div class="pc-tags">
+          <span class="tag">AI Governance</span>
+          <span class="tag">Risk Modelling</span>
+          <span class="tag">R&amp;D</span>
+        </div>
+        <span class="pc-arrow" aria-hidden="true">&#x2197;</span>
+      </article>
+
+      <article class="pillar-card reveal rd3" role="listitem">
+        <div class="pc-num">03</div>
+        <div class="pc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3 class="pc-title">Advisory Services</h3>
+        <p class="pc-body">Expert implementation support for regulatory frameworks. From NIST and ISO 27001 to NIS2 and DORA — our advisors embed alongside client teams to operationalise compliance with precision.</p>
+        <div class="pc-tags">
+          <span class="tag">NIST</span>
+          <span class="tag">ISO 27001</span>
+          <span class="tag">NIS2</span>
+          <span class="tag">DORA</span>
+        </div>
+        <span class="pc-arrow" aria-hidden="true">&#x2197;</span>
+      </article>
+
+    </div>
+
+    <!-- Pipeline -->
+    <div class="pipeline-box reveal">
+      <div class="pipeline-header">
+        <div class="accent-bar" style="margin-bottom:0;width:1.5rem;height:2px;"></div>
+        <span>The IDR Lifecycle Pipeline</span>
+      </div>
+
+      <div class="pipeline-steps" id="pipeline-steps" role="list" aria-label="IDR four-stage lifecycle">
+        <div class="ps" role="listitem">
+          <div class="ps-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="ps-name">Train</div>
+          <div class="ps-desc">Rigorous industry-calibrated programmes</div>
+        </div>
+        <div class="ps" role="listitem">
+          <div class="ps-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="ps-name">Hire</div>
+          <div class="ps-desc">Matched deployment to industry partners</div>
+        </div>
+        <div class="ps" role="listitem">
+          <div class="ps-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="ps-name">Innovate</div>
+          <div class="ps-desc">Live projects &amp; IP creation</div>
+        </div>
+        <div class="ps" role="listitem">
+          <div class="ps-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>
+          </div>
+          <div class="ps-name">Deploy</div>
+          <div class="ps-desc">Embedded in regulated environments</div>
+        </div>
+      </div>
+
+      <!-- Animated connecting line -->
+      <div style="margin:1.5rem 26px 0;position:relative;height:2px;background:var(--c-80);">
+        <div class="pipeline-line-fill" id="pipe-fill"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="section-pad" aria-labelledby="comm-h">
+  <span class="section-ghost-num" aria-hidden="true">03</span>
+  <div class="container">
+    <div class="community-layout">
+
+      <div class="comm-left">
+        <div class="accent-bar reveal"></div>
+        <span class="eyebrow reveal">Who We Serve</span>
+        <h2 id="comm-h" class="reveal rd1">Built for Risk<br>Professionals at<br>Every Stage.</h2>
+        <p class="reveal rd2">
+          Whether you're entering the field or leading it, IDR's ecosystem meets you where you are — and accelerates where you're going.
+        </p>
+        <div class="sectors reveal rd3" aria-label="Sectors served">
+          <span class="sec-pill">Financial Services</span>
+          <span class="sec-pill">Critical Infrastructure</span>
+          <span class="sec-pill">Public Sector</span>
+          <span class="sec-pill">Defence</span>
+          <span class="sec-pill">Healthcare</span>
+          <span class="sec-pill">Energy</span>
+        </div>
+      </div>
+
+      <div class="audience-stack" role="list">
+        <article class="aud-card reveal rd1" role="listitem">
+          <div class="aud-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h4>Students &amp; Graduates</h4>
+            <p>Final-year students and recent graduates from technology, mathematics, law, and social sciences seeking a credentialed entry into digital and cyber risk roles.</p>
+          </div>
+        </article>
+
+        <article class="aud-card reveal rd2" role="listitem">
+          <div class="aud-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div>
+            <h4>Early-Career Professionals</h4>
+            <p>Practitioners with 1–5 years in IT, compliance, or audit seeking to specialise in digital risk, operational resilience, or AI governance frameworks.</p>
+          </div>
+        </article>
+
+        <article class="aud-card reveal rd3" role="listitem">
+          <div class="aud-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4>Seasoned Practitioners</h4>
+            <p>Senior risk professionals and CISOs seeking structured exposure to emerging frameworks — agentic AI risk, cross-jurisdictional obligations (NIS2, DORA, UK GDPR).</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-pad" aria-labelledby="contact-h">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-left">
+        <div class="accent-bar reveal"></div>
+        <span class="eyebrow reveal">Register Interest</span>
+        <h2 id="contact-h" class="reveal rd1">Let's Build the<br>Risk Workforce<br>of Tomorrow.</h2>
+        <p class="reveal rd2">
+          Whether you're an organisation looking to hire talent, an academic exploring
+          partnership, or an individual ready to advance — we want to hear from you.
+        </p>
+        <div class="contact-detail reveal rd3">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:hello@instituteofdigitalrisk.com">hello@instituteofdigitalrisk.com</a>
+        </div>
+      </div>
+
+      <div class="reveal rd2">
+        <form class="cform" id="cform" novalidate aria-label="Register interest form">
+          <div class="frow">
+            <div class="fg">
+              <label for="f-name">Full Name</label>
+              <input type="text" id="f-name" name="name" placeholder="Jane Smith" autocomplete="name" required />
+            </div>
+            <div class="fg">
+              <label for="f-email">Email Address</label>
+              <input type="email" id="f-email" name="email" placeholder="jane@org.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="fg">
+            <label for="f-org">Organisation</label>
+            <input type="text" id="f-org" name="org" placeholder="Your Organisation" autocomplete="organization" />
+          </div>
+          <div class="fg">
+            <label for="f-interest">Area of Interest</label>
+            <select id="f-interest" name="interest">
+              <option value="" disabled selected>Select one&hellip;</option>
+              <option value="hire">Hire IDR Talent</option>
+              <option value="academy">Academy / Training</option>
+              <option value="advisory">Advisory Services</option>
+              <option value="partner">Academic Partnership</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" placeholder="Tell us a bit about your needs&hellip;" rows="4"></textarea>
+          </div>
+          <div id="fmsg-box" class="fmsg" role="alert" aria-live="polite"></div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary">
+              Send Message
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>
+            </button>
+            <span class="form-note">Or email <a href="mailto:hello@instituteofdigitalrisk.com">hello@instituteofdigitalrisk.com</a></span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="site-footer" role="contentinfo">
+  <span class="footer-bg-idr" aria-hidden="true">IDR</span>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <img src="logo.png" style="width:50px;" alt="Logo">
+        <p class="footer-brand-name">IDR</p>
+        <p class="footer-tag">Training and deploying digital risk practitioners.</p>
+        <p class="footer-copy">&copy; <span id="footer-yr"></span> Institute of Digital Risk. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <nav class="f-nav" aria-label="Footer">
+          <a href="#about">About</a>
+          <a href="#model">Model</a>
+          <a href="#community">Community</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="f-orange-line"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="Script.js"></script>
+</body>
+</html>
